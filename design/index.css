@@ -1,0 +1,131 @@
+ *{
+    margin: o;
+    padding: o;
+    box-sizing: border-box
+ }
+
+ body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color:  hsl(30, 38%, 92%);
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .container{
+    margin: 30px auto;
+    padding: 0 30px;
+ }
+.grid{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img img{
+    max-width: 100%;
+    display: inherit;
+}
+.card-content{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h6.pro-cat{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: hsl(158, 36%, 37%);
+    font-weight: 500px; 
+}
+
+h2.pro-name{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 34px;
+line-height: 1em;
+color: hsl(212, 21%, 14%);
+}
+
+p.pro-des{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6em;
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+p.current-price{
+font-family: 'Times New Roman', Times, serif;
+color: hsl(158, 36%, 37%);
+font-size: 25px;
+padding-right: 25px;
+}
+p.old-price{
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+button.cta{
+    background-color: hsl(158, 36%, 37%) ;
+    border: none;
+    padding: 14px 0;
+    border-radius: 12px;
+    color: hsl(0, 0%, 100%) ;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: backgroud-color .3s ease;
+    width: 100%;
+}
+button.cta:hover
+{
+    background-color: hsl(158, 32%, 43%);
+}
+@media only screen and (max-width :628px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+ .img img{
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+ }
+.card-content{
+    display: block;
+}
+h6.pro-cat, h2.pro-name, p.pro-des .price{
+    padding-bottom: 23px;
+}
+}
+
+@media only screen and (max-width:375px){
+    .container{
+       margin: 15px auto;
+       padding: 0 15px;
+    }
+   
+ .img img{
+    max-height: 290px;
+ }
+.card-content{
+    padding: 16px;
+}
+h6.pro-cat, h2.pro-name, p.pro-des .price{
+    padding-bottom: 16px;
+} 
+h2.pro-des{
+    font-size: 12px;
+}
+p.current-price{
+    font-size: 23px;
+}
+button.cta{
+    padding: 11px 0;
+    font-size: 13px;
+
+}
+}
